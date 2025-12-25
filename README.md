@@ -9,9 +9,13 @@
     <img src="https://img.shields.io/website?url=https%3A%2F%2Fshirooni.infinityfree.me%2FAlumini%2F&label=Live%20Demo&style=for-the-badge&logo=google-chrome&color=blue" alt="Live Demo" />
   </a>
   <img src="https://img.shields.io/badge/Version-1.0.0--SUPREME-FFD700?style=for-the-badge&logo=probot&logoColor=white" alt="Version Supreme" />
-  <img src="https://img.shields.io/badge/Security-CSRF_Protected-red?style=for-the-badge&logo=dependabot" alt="Security Protected" />
+  <a href="./includes/security_helper.php">
+    <img src="https://img.shields.io/badge/Security-CSRF_Protected-red?style=for-the-badge&logo=dependabot" alt="Security Protected" />
+  </a>
   <img src="https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8.2+" />
-  <img src="https://img.shields.io/badge/MySQL-Atomic_Transactions-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL Atomic" />
+  <a href="./database.sql">
+    <img src="https://img.shields.io/badge/MySQL-Atomic_Transactions-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL Atomic" />
+  </a>
   <a href="./LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License MIT" />
   </a>
