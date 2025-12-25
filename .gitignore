@@ -1,0 +1,10 @@
+# Ignore user-uploaded content
+uploads/profile_pics/*
+!uploads/profile_pics/.gitkeep
+
+# Ignore sensitive connection details (if you use a separate config)
+includes/config.php
+
+# Ignore system files
+.DS_Store
+Thumbs.db
