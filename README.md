@@ -33,23 +33,23 @@
 
 ---
 
-## Features
+## Features (Supreme Edition)
 
-- Alumni registration with hashed passwords and admin approval workflow. [web:459][web:468]  
-- Login system using `password_verify` and session-based authentication. [web:533][web:545]  
-- Editable alumni profiles (name, batch, branch, phone, city, LinkedIn) with validation and prepared statements. [web:371][web:571]  
-- Public alumni directory with search, status filters, and detailed profile pages. [web:498][web:452]  
-- Admin panel for approving/deleting alumni, moderating comments, and handling reports. [web:501][web:567]  
-- Responsive glassmorphism UI with light/dark theme toggle persisted in `localStorage`. [web:474][web:408]  
-- JSON endpoint for fetching post comments, ready for AJAX frontends. [web:546][web:560]  
+- **Extreme Moderation Suite:** Full control over alumni, posts, and comments with **Atomic Transactions** and row-level locking to prevent data loss.
+- **Nexus Social Hub:** Centralized command center for hosting community events and dispatching global broadcasts.
+- **Glassmorphism Global Search:** A non-disruptive, real-time search engine for instant data retrieval across the entire portal.
+- **Audit Logging & Accountability:** Every administrative action is logged with IP addresses and metadata for high-level security tracking.
+- **Hardened Security:** Centralized **CSRF Protection** via `security_helper.php` and SQL injection prevention using prepared statements.
+- **Live Notifications:** Real-time feedback loop for post approvals and event updates.
 
 ---
 
-## Tech Stack
+## Tech Stack & Security
 
-- **Backend:** PHP 8+, MySQL/MariaDB, mysqli prepared statements. [web:299][web:549]  
-- **Frontend:** Bootstrap 5, custom CSS for glassmorphism, vanilla JavaScript for theme + ripple effects. [web:347][web:521]  
-- **Auth & Security:** PHP sessions, `password_hash` / `password_verify`, input validation on forms and profile updates. [web:468][web:533]  
+- **Backend:** PHP 8.2+ with strictly typed declarations and MySQLi.
+- **Database:** Optimized Relational Schema with **Foreign Key Constraints** and **Atomic Integrity**.
+- **Frontend:** Glassmorphism UI powered by Bootstrap 5, Lucide Icons, and Vanilla JS.
+- **Security Guard:** Cross-Site Request Forgery (CSRF) protection and session-based authentication guards on all entry points.
 
 ---
 
@@ -144,11 +144,13 @@ Create an initial admin/alumni account directly in the DB or via a seed script, 
   - Requires an authenticated alumni session. [web:319]  
   - Lets users edit name, batch, branch, phone, city, and LinkedIn URL via a prepared `UPDATE`. [web:374][web:549]  
 
-### Admin Tools
+## Admin Tools (The Command Center)
 
-- `approve_alumini.php` – approve or delete alumni records.  
-- `delete_comment.php` – remove abusive comments from posts.  
-- `notifications.php` / reports view – list and manage reports (seen / unseen). [web:501][web:498]  
+- `admin/dashboard.php` – High-performance overview with dynamic fail-safe metrics.
+- `admin/social_hub.php` – The pulse of the community: manage events and broadcasts.
+- `admin/approve_post.php` – Supreme moderator with author notification triggers.
+- `admin/global_search.php` – Backend engine for the AJAX-powered search overlay.
+- `admin/logs.php` – Live terminal for system audit trails.
 
 ### Comments API
 
