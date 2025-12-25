@@ -6,17 +6,21 @@
 
 <p align="center">
   <a href="https://shirooni.infinityfree.me/Alumini/">
-    <img src="https://img.shields.io/website?url=https%3A%2F%2Fshirooni.infinityfree.me%2FAlumini%2F&label=Live%20Demo&style=for-the-badge&logo=google-chrome" alt="Live Demo" />
+    <img src="https://img.shields.io/website?url=https%3A%2F%2Fshirooni.infinityfree.me%2FAlumini%2F&label=Live%20Demo&style=for-the-badge&logo=google-chrome&color=blue" alt="Live Demo" />
   </a>
-  <img src="https://img.shields.io/badge/PHP-8%2B-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8+" />
-  <img src="https://img.shields.io/badge/MySQL-MariaDB-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL / MariaDB" />
-  <img src="https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap 5" />
-  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Project Status" />
+  <img src="https://img.shields.io/badge/Version-1.0.0--SUPREME-FFD700?style=for-the-badge&logo=probot&logoColor=white" alt="Version Supreme" />
+  <img src="https://img.shields.io/badge/Security-CSRF_Protected-red?style=for-the-badge&logo=dependabot" alt="Security Protected" />
+  <img src="https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8.2+" />
+  <img src="https://img.shields.io/badge/MySQL-Atomic_Transactions-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL Atomic" />
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License MIT" />
+  </a>
 </p>
 
 <p align="center">
-  Modern PHP + MySQL alumni portal with glassmorphism UI, dark mode, admin dashboard, and JSON APIs.
+  <strong>Nexus Alumini Extreme:</strong> A hardened PHP + MySQL command center featuring atomic moderation, real-time audit logging, and glassmorphism UI.
 </p>
+
 
 ---
 
@@ -164,15 +168,18 @@ Create an initial admin/alumni account directly in the DB or via a seed script, 
 
 ## Contributing
 
-Contributions and suggestions are welcome:
+Contributions and suggestions are welcome to the Nexus Alumini project. To maintain the **Extreme** standard of this repository, please follow these steps:
 
-1. Fork the repo.  
-2. Create a feature branch: `git checkout -b feature/awesome-idea`.  
-3. Commit with clear messages and open a pull request to `main`.  
-
-When you add or change functionality, update **README.md** and **CHANGELOG.md** accordingly. [web:584][web:596]  
+1. **Fork the Repo:** Create your own copy of the project.
+2. **Branching:** Create a feature branch: `git checkout -b feature/awesome-idea`.
+3. **Commit Standards:** Use clear, descriptive commit messages.
+4. **Documentation:** If you add or change functionality, you **must** update the following:
+   - [README.md](./README.md): Update technical specifications or setup instructions.
+   - [CHANGELOG.md](./CHANGELOG.md): Document your changes under the `[Unreleased]` section following the "Keep a Changelog" format.
+5. **Pull Request:** Open a PR to the `main` branch for review.
 
 ---
+
 
 ## License
 
