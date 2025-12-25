@@ -78,11 +78,16 @@ Use this URL to quickly verify UI behaviour in different browsers and devices. [
 ### 1. Clone
 git clone https://github.com/0902cs231028-sys/Alumini.git
 cd your-repo
-### 2. Database setup
+### 2. Database Setup
 
-1. Create a MySQL database (for example `alumni_portal`).  
-2. Import the schema SQL (tables for `alumni`, `posts`, `comments`, `notifications`, etc.).  
-3. Edit `includes/connection.php` and set host, username, password, and database name. [web:567]  
+1. **Create Database:** Open your MySQL manager (phpMyAdmin/Terminal) and create a new database named `alumni_portal`.
+2. **Import Schema:** Import the [database.sql](./database.sql) file located in the root directory. This will automatically build all **7 core tables**, including the Audit Logs and Social Hub schema.
+3. **Configure Connection:** Navigate to `includes/connection.php` and update the following variables to match your environment:
+   ```php
+   $host = 'localhost';
+   $user = 'your_username';
+   $pass = 'your_password';
+   $db   = 'alumni_portal';
 
 ### 3. Run locally
 
@@ -101,32 +106,37 @@ Create an initial admin/alumni account directly in the DB or via a seed script, 
 ## Project Structure
 .
 ├── admin/
-│   ├── admin_login.php
-│   ├── dashboard.php
-│   ├── approve_alumini.php
-│   ├── notifications.php
-│   └── delete_comment.php
+│   ├── admin_login.php      # Admin authentication portal
+│   ├── dashboard.php        # Extreme metrics & operational overview
+│   ├── social_hub.php       # Social command center (Events/Broadcasts)
+│   ├── global_search.php    # AJAX backend for glassmorphism search
+│   ├── manage_posts.php     # Supreme moderation terminal
+│   ├── approve_post.php     # Atomic post moderation & notifications
+│   ├── delete_comment.php   # Hardened comment purge logic
+│   └── logs.php             # Live system audit trail terminal
 ├── assets/
-│   └── banner.png
-├── css/
-│   └── style.css
-├── js/
-│   └── app.js
+│   └── banner.png           # Project branding
 ├── includes/
-│   └── connection.php
-├── index.php
-├── register.php
-├── login.php
-├── profile.php
-├── directory.php
-├── view_alumini.php
-├── list_alumini.php
-├── fetch_comments.php
-├── create_post.php
-├── logout.php
-├── CHANGELOG.md
-└── README.md
+│   ├── connection.php       # Database link (Configuration required)
+│   ├── security_helper.php  # CSRF & Security token engine
+│   └── functions.php        # Core utility logic
+├── css/
+│   └── style.css            # Glassmorphism & Extreme UI variables
+├── js/
+│   ├── app.js               # Theme engine & UI effects
+│   └── comment.js           # AJAX comment threading logic
+├── uploads/
+│   └── profile_pics/        # Admin/Alumni avatar storage
+├── database.sql             # Full v1.0.0-SUPREME database schema
+├── CHANGELOG.md             # Project evolution & version history
+├── LICENSE                  # MIT Legal documentation
+└── README.md                # Supreme system documentation
 
+🧬 Core Logic Components
+admin/logs.php – Provides full accountability by displaying the admin_logs table data.
+includes/security_helper.php – The security backbone handling all CSRF token generation and validation.
+admin/global_search.php – Powers the non-disruptive dashboard search overlay for instant data access.
+database.sql – The complete relational blueprint for 1:1 project replication.
 - `css/style.css` – theme variables, glass cards, tables, buttons, menu styling. [web:474][web:521]  
 - `js/app.js` – theme toggle, OS‑theme listener, button ripple effect. [web:408][web:607]  
 - `fetch_comments.php` – JSON API for comments attached to posts. [web:546][web:550]  
