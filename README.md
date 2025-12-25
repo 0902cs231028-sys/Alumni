@@ -132,11 +132,6 @@ Create an initial admin/alumni account directly in the DB or via a seed script, 
 ├── LICENSE                  # MIT Legal documentation
 └── README.md                # Supreme system documentation
 
-🧬 Core Logic Components
-admin/logs.php – Provides full accountability by displaying the admin_logs table data.
-includes/security_helper.php – The security backbone handling all CSRF token generation and validation.
-admin/global_search.php – Powers the non-disruptive dashboard search overlay for instant data access.
-database.sql – The complete relational blueprint for 1:1 project replication.
 - `css/style.css` – theme variables, glass cards, tables, buttons, menu styling. [web:474][web:521]  
 - `js/app.js` – theme toggle, OS‑theme listener, button ripple effect. [web:408][web:607]  
 - `fetch_comments.php` – JSON API for comments attached to posts. [web:546][web:550]  
