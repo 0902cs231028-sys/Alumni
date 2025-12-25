@@ -1,6 +1,21 @@
 <p align="center">
-  <img src="assets/banner.png" alt="Alumni Connect Portal Banner" width="100%" />
+  <a href="https://shirooni.infinityfree.me/Alumini/">
+    <img src="assets/banner.png" alt="Nexus Alumini Connect Portal" width="100%" style="border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+  </a>
 </p>
+
+<div align="center">
+
+# 🛡️ Nexus Alumini:
+**The Command Center for Community Engagement & Atomic Moderation**
+
+[![Project Status: Active](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)](https://shirooni.infinityfree.me/Alumini/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-blue.svg?style=for-the-badge)](https://github.com/0902cs231028-sys/Alumini/graphs/commit-activity)
+
+</div>
+
+---
+
 
 <h1 align="center">Alumni Connect Portal</h1>
 
