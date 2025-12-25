@@ -1,1 +1,175 @@
-# Alumini
+<p align="center">
+  <img src="assets/banner.png" alt="Alumni Connect Portal Banner" width="100%" />
+</p>
+
+<h1 align="center">Alumni Connect Portal</h1>
+
+<p align="center">
+  <a href="https://shirooni.infinityfree.me/Alumini/">
+    <img src="https://img.shields.io/website?url=https%3A%2F%2Fshirooni.infinityfree.me%2FAlumini%2F&label=Live%20Demo&style=for-the-badge&logo=google-chrome" alt="Live Demo" />
+  </a>
+  <img src="https://img.shields.io/badge/PHP-8%2B-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8+" />
+  <img src="https://img.shields.io/badge/MySQL-MariaDB-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL / MariaDB" />
+  <img src="https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap 5" />
+  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Project Status" />
+</p>
+
+<p align="center">
+  Modern PHP + MySQL alumni portal with glassmorphism UI, dark mode, admin dashboard, and JSON APIs.
+</p>
+
+---
+
+## Table of Contents
+
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Live Demo](#live-demo)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Core Flows](#core-flows)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## Features
+
+- Alumni registration with hashed passwords and admin approval workflow. [web:459][web:468]  
+- Login system using `password_verify` and session-based authentication. [web:533][web:545]  
+- Editable alumni profiles (name, batch, branch, phone, city, LinkedIn) with validation and prepared statements. [web:371][web:571]  
+- Public alumni directory with search, status filters, and detailed profile pages. [web:498][web:452]  
+- Admin panel for approving/deleting alumni, moderating comments, and handling reports. [web:501][web:567]  
+- Responsive glassmorphism UI with light/dark theme toggle persisted in `localStorage`. [web:474][web:408]  
+- JSON endpoint for fetching post comments, ready for AJAX frontends. [web:546][web:560]  
+
+---
+
+## Tech Stack
+
+- **Backend:** PHP 8+, MySQL/MariaDB, mysqli prepared statements. [web:299][web:549]  
+- **Frontend:** Bootstrap 5, custom CSS for glassmorphism, vanilla JavaScript for theme + ripple effects. [web:347][web:521]  
+- **Auth & Security:** PHP sessions, `password_hash` / `password_verify`, input validation on forms and profile updates. [web:468][web:533]  
+
+---
+
+## Live Demo
+
+The project is deployed at:
+
+> https://shirooni.infinityfree.me/Alumini/
+
+Use this URL to quickly verify UI behaviour in different browsers and devices. [web:587]  
+
+---
+
+## Getting Started
+
+### 1. Clone
+git clone https://github.com/0902cs231028-sys/Alumini.git
+cd your-repo
+### 2. Database setup
+
+1. Create a MySQL database (for example `alumni_portal`).  
+2. Import the schema SQL (tables for `alumni`, `posts`, `comments`, `notifications`, etc.).  
+3. Edit `includes/connection.php` and set host, username, password, and database name. [web:567]  
+
+### 3. Run locally
+
+Using PHP’s built‑in server:php -S localhost:8000
+
+Then open `http://localhost:8000` in a browser. [web:490]  
+
+Create an initial admin/alumni account directly in the DB or via a seed script, then log in via:
+
+- `/login.php` — alumni login  
+- `/register.php` — alumni registration  
+- `/admin/admin_login.php` — admin dashboard login  
+
+---
+
+## Project Structure
+.
+├── admin/
+│   ├── admin_login.php
+│   ├── dashboard.php
+│   ├── approve_alumini.php
+│   ├── notifications.php
+│   └── delete_comment.php
+├── assets/
+│   └── banner.png
+├── css/
+│   └── style.css
+├── js/
+│   └── app.js
+├── includes/
+│   └── connection.php
+├── index.php
+├── register.php
+├── login.php
+├── profile.php
+├── directory.php
+├── view_alumini.php
+├── list_alumini.php
+├── fetch_comments.php
+├── create_post.php
+├── logout.php
+├── CHANGELOG.md
+└── README.md
+
+- `css/style.css` – theme variables, glass cards, tables, buttons, menu styling. [web:474][web:521]  
+- `js/app.js` – theme toggle, OS‑theme listener, button ripple effect. [web:408][web:607]  
+- `fetch_comments.php` – JSON API for comments attached to posts. [web:546][web:550]  
+
+---
+
+## Core Flows
+
+### Alumni Registration
+
+- `register.php`  
+  - Validates required fields and email format.  
+  - Hashes password before inserting into the `alumni` table. [web:468][web:540]  
+  - New accounts are pending until an admin marks them approved. [web:501]  
+
+### Login & Session
+
+- `login.php`  
+  - Looks up an approved alumni by email using prepared statements. [web:534][web:299]  
+  - Verifies the password with `password_verify` and sets `$_SESSION['alumni_id']`. [web:533]  
+
+### Profile Management
+
+- `profile.php`  
+  - Requires an authenticated alumni session. [web:319]  
+  - Lets users edit name, batch, branch, phone, city, and LinkedIn URL via a prepared `UPDATE`. [web:374][web:549]  
+
+### Admin Tools
+
+- `approve_alumini.php` – approve or delete alumni records.  
+- `delete_comment.php` – remove abusive comments from posts.  
+- `notifications.php` / reports view – list and manage reports (seen / unseen). [web:501][web:498]  
+
+### Comments API
+
+- `fetch_comments.php`  
+  - Accepts `GET post_id`.  
+  - Returns an ordered JSON array of comments (id, content, created_at, alumni_id, name). [web:546][web:560]  
+
+---
+
+## Contributing
+
+Contributions and suggestions are welcome:
+
+1. Fork the repo.  
+2. Create a feature branch: `git checkout -b feature/awesome-idea`.  
+3. Commit with clear messages and open a pull request to `main`.  
+
+When you add or change functionality, update **README.md** and **CHANGELOG.md** accordingly. [web:584][web:596]  
+
+---
+
+## License
+
+This project is released under the MIT License. See `LICENSE` for details. [web:587]  
