@@ -28,10 +28,12 @@
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Core Flows](#core-flows)
+- [Changelog](./CHANGELOG.md)
 - [Contributing](#contributing)
 - [License](#license)
 
 ---
+
 
 ## Features (Supreme Edition)
 
@@ -174,4 +176,5 @@ When you add or change functionality, update **README.md** and **CHANGELOG.md** 
 
 ## License
 
-This project is released under the MIT License. See `LICENSE` for details. [web:587]  
+This project is released under the **MIT License**. See the [LICENSE](./LICENSE) file for the full legal text.
+
