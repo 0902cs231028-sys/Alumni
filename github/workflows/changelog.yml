@@ -1,0 +1,40 @@
+name: 🤖 Smart Changelog Bot
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'CHANGELOG.md' # Crucial to prevent loops
+
+permissions:
+  contents: write
+
+jobs:
+  smart-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2 # Required for 'git diff' to work!
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: 🧠 Run Smart Analysis
+        run: python command.py
+
+      - name: 🚀 Commit & Push
+        run: |
+          git config --global user.name "StudyShare Bot"
+          git config --global user.email "bot@studyshare.com"
+          if [[ `git status --porcelain` ]]; then
+            git add CHANGELOG.md
+            git commit -m "docs: 📝 AI-Enhanced Changelog Update [skip ci]"
+            git push
+          else
+            echo "No documentation needed."
+          fi
