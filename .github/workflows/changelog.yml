@@ -33,7 +33,7 @@ jobs:
           git config --global user.email "Alumni.com"
           if [[ `git status --porcelain` ]]; then
             git add CHANGELOG.md
-            git commit -m "docs: 📝 AI-Enhanced Changelog Update [skip ci]"
+            git commit -m "docs: 📝 Changelog Update [skip ci]"
             git push
           else
             echo "No documentation needed."
