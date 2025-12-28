@@ -2,7 +2,7 @@
 declare(strict_types=1);
 require __DIR__ . '/includes/connection.php';
 
-// 1. Precise Input Validation
+// 1. Input Validation
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 if (!$id || $id <= 0) {
     http_response_code(404);
