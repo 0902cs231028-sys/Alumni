@@ -29,8 +29,8 @@ jobs:
 
       - name: 🚀 Commit & Push
         run: |
-          git config --global user.name "StudyShare Bot"
-          git config --global user.email "bot@studyshare.com"
+          git config --global user.name "Alumni Bot"
+          git config --global user.email "Alumni.com"
           if [[ `git status --porcelain` ]]; then
             git add CHANGELOG.md
             git commit -m "docs: 📝 AI-Enhanced Changelog Update [skip ci]"
