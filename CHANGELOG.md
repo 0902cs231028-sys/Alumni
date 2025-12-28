@@ -1,5 +1,9 @@
 # 📜 Nexus Alumini: Extreme Edition Changelog
 
+## [Auto-Log] - 2025-12-28
+- **🤖 GitHub Actions:** 🎉 Created `changelog.yml`
+- **🔧 CI/CD:** 🗑️ Deleted `changelog.yml`
+
 All notable changes to the Nexus Alumini project are documented here. This project follows the philosophy of **Atomic Stability** and **Extreme Administrative Control**.
 
 ---
