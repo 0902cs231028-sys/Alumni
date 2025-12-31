@@ -1,5 +1,8 @@
 # 📜 Nexus Alumini: Extreme Edition Changelog
 
+## [Auto-Log] - 2025-12-31
+- **📖 Main Documentation:** 🔒 Security Logic in `README.md`
+
 ## [Auto-Log] - 2025-12-28
 - **🤖 GitHub Actions:** ⚡ Update in `changelog.yml`
 
