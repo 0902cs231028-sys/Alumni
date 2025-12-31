@@ -119,7 +119,7 @@ Create an initial admin/alumni account directly in the DB or via a seed script, 
 ---
 
 ## Project Structure
-.
+```
 ├── admin/
 │   ├── admin_login.php      # Admin authentication portal
 │   ├── dashboard.php        # Extreme metrics & operational overview
@@ -146,9 +146,7 @@ Create an initial admin/alumni account directly in the DB or via a seed script, 
 ├── CHANGELOG.md             # Project evolution & version history
 ├── LICENSE                  # MIT Legal documentation
 └── README.md                # Supreme system documentation
-
-- `css/style.css` – theme variables, glass cards, tables, buttons, menu styling. [web:474][web:521]  
-- `js/app.js` – theme toggle, OS‑theme listener, button ripple effect. [web:408][web:607]  
+```
 - `fetch_comments.php` – JSON API for comments attached to posts. [web:546][web:550]  
 
 ---
